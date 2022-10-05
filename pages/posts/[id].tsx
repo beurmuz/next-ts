@@ -1,6 +1,7 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import Head from "next/head";
 import React from "react";
+import postStyles from "../../styles/Post.module.css";
 import { getAllPostIds, getPostData, getSortedPostsData } from "../../lib/post";
 
 const Post = ({
@@ -13,7 +14,7 @@ const Post = ({
   };
 }) => {
   return (
-    <div>
+    <div className={postStyles.container}>
       <Head>
         <title>{postData.title}</title>
       </Head>
